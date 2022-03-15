@@ -1,5 +1,5 @@
 echo -n "- Configurando Timezone "
-sudo timedatectl set-timezone America/Sao_Paulo > /dev/status 2>&1
+timedatectl set-timezone America/Sao_Paulo > /dev/status 2>&1
 if [ $? = 0 ]; then
   echo "[OK]"
 else
@@ -12,7 +12,7 @@ else
 fi
 
 echo -n "- Instalando pacotes necessários via yun "
-sudo yum -y install git > /dev/status 2>&1
+yum -y install git > /dev/status 2>&1
 if [ $? = 0 ]; then
   echo "[OK]"
 else
@@ -25,7 +25,7 @@ else
 fi
 
 echo -n "- Instalando pacotes necessários via pip3"
-sudo pip3 install oci oci-cli > /dev/status 2>&1
+pip3 install oci oci-cli > /dev/status 2>&1
 if [ $? = 0 ]; then
   echo "[OK]"
 else
