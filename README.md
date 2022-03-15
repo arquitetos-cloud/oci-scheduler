@@ -44,7 +44,7 @@ Primeiramente você precisa provisionar uma compute instância com a imagem <b>O
 curl -fsSL https://raw.githubusercontent.com/arquitetos-cloud/oci-scheduler/main/install.sh | bash
 ```
 
-Assim que o processo for concluído, você precisará acessar o console do OCI para criar um grupo e uma policite dando permissão para que essa instância possa orquestrar.
+Assim que o processo for concluído, você precisará acessar o console do OCI para criar um grupo e uma politica dando permissão para que essa instância possa orquestrar.
 
 1. **Criação do grupo dinamico**
 
