@@ -38,7 +38,7 @@ O script **OCI-Scheduler**: é um único script de Scheduler e Auto Scaling para
 
 # Como instalar
 
-Primeiramente você precisa provisionar uma compute instância com a imagem <b>Oracle Autonomous Linux 7.x</b>. Depois de provisionar a maquina, você precisa logar nela e executar o seguinte comando:
+Primeiramente você precisa provisionar uma compute instância com a imagem <b>Oracle Autonomous Linux 7.x</b>, ela deve ter 1 ocpu e 8gb de memória. Chame a instâbcia de "OCI-Scheduler". Depois de provisionar a maquina, você precisa logar nela e executar o seguinte comando:
 
 ```shell
 curl -fsSL https://raw.githubusercontent.com/arquitetos-cloud/oci-scheduler/main/install.sh | bash
