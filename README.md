@@ -70,7 +70,7 @@ Tudo pronto, agora a instância já possui as permissões que precisa para fazer
 
 O processo de criação das tags pode ser automatizado pelo script **CreateNameSpaces.py**, para isso execute a linha de comando abaixo ma instância criada:
 
-python /usr/local/oci-scheduler/CreateNameSpaces.py
+python3 /usr/local/oci-scheduler/CreateNameSpaces.py -ip
 
 Depois que o script criar as Tags, o processo de instalação estará concluído.
 # Como utilizar
