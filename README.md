@@ -73,10 +73,18 @@ O processo de criação das tags pode ser automatizado pelo script **CreateNameS
 python3 /usr/local/oci-scheduler/CreateNameSpaces.py -ip
 
 Depois que o script criar as Tags, o processo de instalação estará concluído.
+
 # Como utilizar
 
 Para controlar o que aumentar/diminuir ou ligar/desligar, você precisa criar uma tag predefinida chamada **Schedule**.
 Como parte do processo de setup, o script CreateNameSpaces.py faz isso para você.
+
+Se você já fez a instalação conforme passo anterior, basta adicionar uma ou mais tags a sua instância, como o exemplo abaixo:
+
+![](assets/20220315_173906_image.png)
+
+No nosso examplo, adicionamos uma tag que contem 24 caracateres separados por virgula onde cada caracter representa uma hora do dia e o valor representa a ação. No caso do primeiro caracter é a meia noite, ou seja 00:00 e o valor 0 significa que é para desligar a maquina.
+O segundo caracter é outro 0, e vai assim até o décimo caracter que é o numero 1, nesse caso o décimo caracter representa as 10:00 da manha e o número 1 diz que devemos ligar a maquina as 10:00 da manha.
 
 Um único recurso pode conter várias tags. A prioridade das tags é a seguinte (de baixa a alta)
 
@@ -87,7 +95,7 @@ Um único recurso pode conter várias tags. A prioridade das tags é a seguinte 
 
 ### Valores para as tags AnyDay, Weekday, Weekend e Day of week:
 
-O valor da tag precisa conter 24 números e/ou curingas caracteres de curinga como por exemplo o caracter "*", caso contrário é ignorado. Esses caracteres devem ser separados por vírgulas. Se o valor for 0, ele desligará o recurso (se houver suporte para esse recurso). Qualquer número maior que 0 redimensionará o recurso para esse número ou liga o recurso caso não suporte o dimencionamento.
+Conforme o exemplo que mostramos anteriormente, valor da tag precisa conter 24 números e/ou curingas caracteres de curinga como por exemplo o caracter "*", caso contrário é ignorado. Esses caracteres devem ser separados por vírgulas. Se o valor for 0, ele desligará o recurso (se houver suporte para esse recurso). Qualquer número maior que 0 redimensionará o recurso para esse número ou liga o recurso caso não suporte o dimencionamento.
 
 Quando um caracter de curinga for usado "*", o serviço permanecerá inalterado por essa hora. Por exemplo, a programação abaixo ativará uma instância de computação à noite, mas permite que o usuário gerencie o estado durante o dia.
 
