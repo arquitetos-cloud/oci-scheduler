@@ -1,2 +1,2 @@
-58 * * * * python3 /usr/local/oci-scheduler/AutoScaleALL.py -a Down
-01 * * * * python3 /usr/local/oci-scheduler/AutoScaleALL.py -a Up
+58 * * * * python3 /usr/local/oci-scheduler/AutoScaleALL.py -ip -a Down
+01 * * * * python3 /usr/local/oci-scheduler/AutoScaleALL.py -ip -a Up
